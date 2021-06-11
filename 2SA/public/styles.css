@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+    height: 100vh;
+}
+
+/* main layout */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    /* allow element to shrink (to 0px) */
+    min-height: 0px;
+    /* flex */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    width: 15%;
+    min-width: 200px;
+}
+
+article {
+    flex-grow: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: row;
+     flex-wrap: wrap;
+}
+article h2{
+	text-align: right;
+
+}
+.canvas {
+    flex-grow: 1;
+    min-height: 0;
+    outline: black 5px solid;
+}
+
+/* animation controls */
+.animation-controls-slider {
+    display: flex;
+    flex-direction: row;
+}
+
+.animation-controls-slider input {
+    flex-grow: 1;
+}
+
+.animation-controls-buttons {
+    text-align: center;
+}
+
+
+.animation-controls-buttons button {
+    background-color: transparent;
+    border: none;
+}
+
+/* header */
+header {
+    border-bottom: 1px solid #dddddd;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+}
+
+.heading * {
+    align-self: flex-end;
+    padding: 0px 5px;
+}
+
+.heading h1 {
+    color: #ff4500;
+}
+
+/* sidepanels */
+.panel-left {
+    border-right: 1px solid #dddddd;
+    overflow-y: scroll;
+    
+}
+
+.panel-right {
+    border-left: 1px solid #dddddd;
+    overflow-y: scroll;
+}
+
+/* dropdown menu */
+.dropdown {
+    display: flex;
+    flex-direction: row;
+    /* reset list styles */
+    list-style-type: none;
+}
+
+.dropdown li {
+    position: relative;
+}
+
+.dropdown-item {
+    font-size: small;
+    padding: 8px;
+    text-align: left;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown-disabled {
+    color: #888888;
+}
+
+.dropdown-disabled:hover {
+    background-color: transparent;
+}
+
+.dropdown-menu hr {
+    border: 1px solid #dddddd;
+}
+
+.dropdown-menu {
+    width: 150px;
+    padding: 1px;
+    border-radius: 3px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+    background-color: white;
+
+    /* absolute position */
+    left: 0;
+    position: absolute;
+    top: 100%;
+
+    /* reset list styles */
+    list-style-type: none;
+}
+
+.dropdown-submenu {
+    left: 90%;
+    position: absolute;
+    top: -10%;
+}
+
+/* main */
+main h2 {
+    text-align: center;
+}
+
+/* controls */
+.controls {
+    border-top: 1px solid #dddddd;
+}
+
+/* configurations */
+.card-configuration {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+}
+
+.card-configuration:hover {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-configuration div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-configuration span {
+    overflow: hidden;
+}
+
+.card-configuration input[type="color"] {
+    background-color: transparent;
+    border: none;
+    width: 25px;
+    height: 25px;
+}
+
+.card-configuration input[type="range"] {
+    width: 100%;
+}
+.card-configuration input[type="number"]{
+	width: 50%;
+	}
+.card-configuration input[type="checkbox"]{
+width:10;
+}	
+/* Dialog */
+.dialog-grey-out {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(200, 200, 200, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-window {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.dialog-window > button {
+    color: white;
+    background-color: #ff4500;
+    display: block;
+    border: none;
+    border-radius: 3px;
+}
+
+.dialog-window > * {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 8px;
+}
+
+.dialog-window > button:hover {
+    background-color: #f03100;
+}
+
+/* media queries */
+@media screen and (max-width: 600px) {
+    aside {
+        display: none;
+    }
+}

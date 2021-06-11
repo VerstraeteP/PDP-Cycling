@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "outDir": "./public/build/",
+        "target": "ES2017",
+        "strict": false
+    }
+}
